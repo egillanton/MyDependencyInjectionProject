@@ -65,8 +65,6 @@ namespace MyDependencyInjectionProject
             }
         }
 
-        // Not testable due to lack of isolation. and code is hard to maintain
-
         /// <summary>
         /// Example 1: Not testable due to lack of isolation, and code is hard to maintain
         /// </summary>

@@ -66,6 +66,11 @@ namespace MyDependencyInjectionProject
         }
 
         // Not testable due to lack of isolation. and code is hard to maintain
+
+        /// <summary>
+        /// Example 1: Not testable due to lack of isolation, and code is hard to maintain
+        /// </summary>
+        /// <param name="orderInfo">The order information.</param>
         private static void Example1(OrderInfo orderInfo)
         {
             Commerce commerce = new Commerce();
@@ -73,7 +78,8 @@ namespace MyDependencyInjectionProject
         }
 
         /// <summary>
-        /// Stage2: Testable, but hard to maintain, especially if the layers get any deeper, and if initialized in different locations.
+        /// Example 2: Testable, but hard to maintain, especially if the layers get any deeper, 
+        /// and if initialized in different locations.
         /// </summary>
         /// <param name="orederInfo">The order information.</param>
         private static void Example2(OrderInfo orderInfo)
@@ -88,8 +94,8 @@ namespace MyDependencyInjectionProject
         }
 
         /// <summary>
-        /// Stage3: Testable and maintainable, with the use of Dependency Injection
-        /// Need to done once instead of many places at once. Just call Container.Resolve
+        /// Example 3: Testable and maintainable, with the use of Dependency Injection
+        /// Need to done once instead of many places at once; just call Container.Resolve<>()
         /// </summary>
         /// <param name="orderInfo">The order information.</param>
         private static void Example3(OrderInfo orderInfo)
